@@ -12,6 +12,11 @@ env/
 data/*
 !data/.gitkeep
 
+# Runtime artifacts for the packaged bot variant
+naukri_bot/data/chrome_profile/
+naukri_bot/data/*.json
+naukri_bot/__pycache__/
+
 build/
 dist/
 *.egg-info/
