@@ -1,0 +1,71 @@
+https://www.naukri.com/mnjuser/recommendedjobs
+Naukri Automation Flow (AI Driven)
+
+1. LOGIN
+   ├─ Open Naukri
+   ├─ Enter credentials
+   └─ Wait until dashboard loads
+
+2. OPEN RECOMMENDED JOBS
+   ├─ Click "Jobs"
+   ├─ Click "Recommended Jobs"
+   └─ Wait until job list loads
+
+3. PROCESS JOBS ONE BY ONE
+
+   FOR each job card:
+
+   ├─ Extract:
+   │   ├─ Job Title
+   │   ├─ Experience Required
+   │   ├─ Company Name
+   │      │
+   ├─ Check Experience
+   │
+   ├─ IF Experience > 4 Years
+   │      └─ Skip Job
+   │
+   ├─ ELSE
+   │      └─ Send Data To AI
+   │
+   ├─ AI Decision:
+   │      ├─ APPLY
+   │      └─ SKIP
+   │
+   ├─ IF AI says SKIP
+   │      └─ do not click on check box   │
+   ├─ IF AI says APPLY
+   │      └─ Select Checkbox
+   │
+   └─ Continue scrolling
+
+4. BATCH APPLY
+
+   IF selected_jobs_count == 5
+
+   ├─ Click "Apply to 5 Jobs"
+   ├─ Wait for application popup
+   └─ Handle Questions
+
+5. QUESTION ANSWERING
+
+   FOR each question:
+
+   ├─ Read Question
+   ├─ Send Question + Resume Data to AI
+   ├─ Generate Answer
+   ├─ Fill Answer
+   └─ Continue
+
+6. FINAL SUBMISSION
+
+   ├─ Click Save / Submit
+   ├─ Wait for success message
+   ├─ Clear selected count
+   └─ Continue scanning jobs
+
+7. END CONDITION
+
+   ├─ again repeat this steps for click applies,topcandiate,preference,you might like
+   ├─ Daily apply limit reached
+   └─ Stop automation
